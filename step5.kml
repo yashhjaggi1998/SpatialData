@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Style id="z1">
+      <IconStyle>
+        <Icon> <href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href> </Icon>
+      </IconStyle>
+    </Style>
+    
+    <!-- Eatries-->
+    <Folder>
+      <name>USC Eating Joints</name>
+      
+      <!--Starbucks-->
+      <Placemark>
+        <name>Starbucks</name>
+        <Point>
+          <coordinates>-118.2821677202928, 34.021697586300895</coordinates>
+        </Point>
+      </Placemark>
+      
+      <!-- Sunlife Organics-->
+      <Placemark>
+        <name>Sunlife Organics</name>
+        <Point>
+          <coordinates>-118.28538588336585, 34.02454183401242</coordinates>
+        </Point>
+      </Placemark>
+
+      <!--Kobunga-->
+      <Placemark>
+        <name>Kobunga</name>
+        <Point>
+          <coordinates>-118.2856017216613, 34.02463544537857</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+
+    <!-- Libraries-->
+    <Folder>
+      <name>USC Libraries</name>
+      
+      <!--Wilson Dental-->
+      <Placemark>
+        <name>Wilson Dental Library</name>
+        <Point>
+          <coordinates>-118.2860022058789, 34.02381734421054</coordinates>
+        </Point>
+      </Placemark>
+      
+      <!-- Leavey-->
+      <Placemark>
+        <name>Leavey Library</name>
+        <Point>
+          <coordinates>-118.28283313381495, 34.021887472789864</coordinates>
+        </Point>
+      </Placemark>
+
+      <!--Doheny Memorial -->
+      <Placemark>
+        <name>Doheny Memorial Library</name>
+        <Point>
+          <coordinates>-118.28369260141545, 34.020261683532226</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+
+    <!-- Waterworks-->
+    <Folder>
+      <name>USC Waterworks</name>
+      
+      <!--SCA Fountain-->
+      <Placemark>
+        <name>SCA Fountain</name>
+        <Point>
+          <coordinates>-118.2864276813086, 34.02372649398103</coordinates>
+        </Point>
+      </Placemark>
+      
+      <!-- Patsy and Forrest Shumway Fountain-->
+      <Placemark>
+        <name>Patsy and Forrest Shumway Fountain</name>
+        <Point>
+          <coordinates>-118.28531671038935, 34.02019870511084</coordinates>
+        </Point>
+      </Placemark>
+
+      <!--Prentiss Memorial Fountain-->
+      <Placemark>
+        <name>Prentiss Memorial Fountain</name>
+        <Point>
+          <coordinates>-118.28468059391433, 34.02049872505261</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+
+    <!-- Entrances-->
+    <Folder>
+      <name>USC Entrances</name>
+      
+      <!--Pardee Way-->
+      <Placemark>
+        <name>Pardee Way Entrance</name>
+        <Point>
+          <coordinates>-118.28334530327362, 34.01839608586059</coordinates>
+        </Point>
+      </Placemark>
+      
+      <!-- Downey Way-->
+      <Placemark>
+        <name>Downey Way Entrance</name>
+        <Point>
+          <coordinates>-118.2912511595049, 34.02197736620561</coordinates>
+        </Point>
+      </Placemark>
+
+      <!--McCarthy Way-->
+      <Placemark>
+        <name>McCarthy Way Entrance</name>
+        <Point>
+          <coordinates>-118.28139927230421, 34.020622875042</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+
+    <!--Home-->
+    <Placemark>
+      <name>Home</name>
+      <description>Some place to crash:)</description>
+      <Point>
+        <coordinates>-118.2796102908302, 34.033380379197176</coordinates>
+      </Point>
+    </Placemark>
+
+    <!-- Convex Hull -->
+    <Style id="convexHullPolygon">
+      <LineStyle>
+        <width>5</width>
+        <color>ef5350ff</color>
+      </LineStyle>
+      <PolyStyle><color>ffffff</color></PolyStyle>
+    </Style>
+    <Placemark>
+      <name>Convex Hull</name>
+      <styleUrl>#convexHullPolygon</styleUrl>
+      <Polygon>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              -118.28334530327362,34.01839608586059,20
+              -118.2912511595049,34.02197736620561,20
+              -118.2796102908302,34.033380379197176,20
+              -118.28139927230421,34.020622875042,20
+              -118.28334530327362,34.01839608586059,20
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+    <!-- 4 Nearest Neighbours -->
+    <Style id="sunlife">
+      <LineStyle><color>ff235523</color></LineStyle>
+    </Style>
+    <Placemark>
+      <styleUrl>#sunlife</styleUrl>
+      <name>Home - Sunlife Organics</name>
+      <LineString>
+        <width>1</width>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates> 
+          -118.2796102908302,34.033380379197176,17 
+          -118.28538588336585,34.02454183401242,17
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Style id="kobunga">
+      <LineStyle><color>ff235523</color></LineStyle>
+    </Style>
+    <Placemark>
+      <name>Home - Kobunga</name>
+      <LineString>
+        <width>2</width>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates> 
+          -118.2796102908302,34.033380379197176,17 
+          -118.2856017216613,34.02463544537857,17
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Style id="wilsonDental">
+      <LineStyle><color>ff235523</color></LineStyle>
+    </Style>
+    <Placemark>
+      <name>Home - Wilson Dental</name>
+      <LineString>
+        <width>2</width>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates> 
+          -118.2796102908302,34.033380379197176,17 
+          -118.2860022058789,34.02381734421054,17
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Style id="scaFountain">
+      <LineStyle><color>ff235523</color></LineStyle>
+    </Style>
+    <Placemark>
+      <name>Home - SCA Fountain</name>
+      <LineString>
+        <width>2</width>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates> 
+          -118.2796102908302,34.033380379197176,17 
+          -118.2864276813086,34.02372649398103,17
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Document>
+</kml>

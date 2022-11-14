@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Open Layers</title>
+    <script src="https://openlayers.org/api/OpenLayers.js"></script>
+    <style>
+    #map {
+        width:100%;
+        height:900px;
+    }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script>
+        var places = {"coordinates":[
+            {"latitude":34.033380379197176, "longitude":-118.2796102908302}, //Home
+
+            {"latitude":34.021697586300895, "longitude":-118.2821677202928},
+            {"latitude":34.02454183401242, "longitude":-118.28538588336585},
+            {"latitude":34.02463544537857, "longitude":-118.2856017216613},
+            {"latitude":34.02381734421054, "longitude":-118.2860022058789},
+            {"latitude":34.021887472789864, "longitude":-118.28283313381495},
+            {"latitude":34.020261683532226, "longitude":-118.28369260141545},
+            {"latitude":34.02372649398103, "longitude":-118.2864276813086},
+            {"latitude":34.02019870511084, "longitude":-118.28531671038935},
+            {"latitude":34.02049872505261, "longitude":-118.28468059391433},
+            {"latitude":34.01839608586059, "longitude":-118.28334530327362},
+            {"latitude":34.02197736620561, "longitude":-118.2912511595049},
+            {"latitude":34.020622875042, "longitude":-118.28139927230421},
+        ]};
+
+        localStorage.setItem("mapCoordinates", JSON.stringify(places));
+
+        var dataStored = JSON.parse(localStorage.getItem("mapCoordinates"));
+        console.log("Stored Data:", dataStored.coordinates);
+        console.log(dataStored); 
+
+        var coordinates = dataStored.coordinates;
+        for(var coordinate in coordinates) 
+            console.log("Individual Location", coordinates[coordinate]);
+
+        
+        initMap();
+
+        //plot individual places
+        coordinates.forEach(coordinate => {
+            addMarker(coordinate.latitude, coordinate.longitude); 
+        });
+
+        function initMap() {
+            map = new OpenLayers.Map('map');
+            basemap = new OpenLayers.Layer.OSM("Simple OSM Map");
+            map.addLayer(basemap);
+            markers = new OpenLayers.Layer.Markers("Markers");
+            map.addLayer(markers);
+        }
+
+        function addMarker(latitude, longitude) {
+            var longitudeLatitude = new OpenLayers.LonLat(longitude, latitude).transform(
+                    new OpenLayers.Projection("EPSG:4326"), 
+                    map.getProjectionObject() // to Spherical Mercator Projection
+            );
+            var point = new OpenLayers.Marker(longitudeLatitude);
+            markers.addMarker(point);
+            map.setCenter(longitudeLatitude, 14); 
+        }
+
+    </script>
+</body>
+</html>

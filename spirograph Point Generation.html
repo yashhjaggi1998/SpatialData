@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+ <head></head>
+ <body>
+ </body> 
+    <script>
+        var R=0.006, r=0.001, a=0.008; 
+        var ttx = 34.02057589080747, tty = -118.28544282580883;
+        var x0=R+r-a, y0=0;
+
+        var cos=Math.cos, sin=Math.sin, pi=Math.PI, nRev=16;
+
+        for(var t=0.0; t<(pi*nRev); t+=0.01)
+        {
+          var x = (R+r)*cos((r/R)*t) - a*cos((1+r/R)*t);
+          var y = (R+r)*sin((r/R)*t) - a*sin((1+r/R)*t);
+          document.write(tty+y,",",ttx+x,",",17);
+          document.write(";");
+        }
+  </script>
+</html>
