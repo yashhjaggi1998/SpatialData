@@ -6,3 +6,5 @@ The data has been visualized using Google Earth. This requires uploading a KML f
 
 
 ![alt text](https://github.com/yashhjaggi1998/SpatialData/blob/main/step3.png)
+![alt text](https://github.com/yashhjaggi1998/SpatialData/blob/main/step5.png)
+![alt text](https://github.com/yashhjaggi1998/SpatialData/blob/main/step7.png)
