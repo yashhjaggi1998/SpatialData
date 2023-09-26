@@ -7,6 +7,6 @@ In this project, I have collected (lat, long) coordinates of various places near
 
 ![alt text](https://github.com/yashhjaggi1998/SpatialData/blob/main/step3.png)
 
-![alt text]("https://github.com/yashhjaggi1998/SpatialData/blob/main/step5.png")
+![alt text](https://github.com/yashhjaggi1998/SpatialData/blob/main/step5.png)
 
-![alt text]("https://github.com/yashhjaggi1998/SpatialData/blob/main/step7.png")
+![alt text](https://github.com/yashhjaggi1998/SpatialData/blob/main/step7.png)
